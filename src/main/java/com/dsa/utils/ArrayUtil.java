@@ -14,14 +14,29 @@ public class ArrayUtil {
             return;
         }
         
-        StringBuilder sb = new StringBuilder("[");
+        System.out.print("[");
         for (int i = 0; i < arr.length; i++) {
-            sb.append(arr[i]);
+            System.out.print(arr[i]);
             if (i < arr.length - 1) {
-                sb.append(", ");
+                System.out.print(", ");
             }
         }
-        sb.append("]");
-        System.out.println(sb.toString());
+        System.out.println("]");
+    }
+
+    public static void printArray(int[] arr, int length) {
+        if (arr == null || length == 0) {
+            System.out.println("[]");
+            return;
+        }
+        
+        System.out.print("[");
+        for (int i = 0; i < length; i++) {
+            System.out.print(arr[i]);
+            if (i < length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
     }
 } 
