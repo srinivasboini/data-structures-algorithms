@@ -1,0 +1,233 @@
+# DSA Practice Project Guidelines
+
+## Package Structure
+- Each problem should have its own package named after the problem (e.g., `com.dsa.arrays.twosum`)
+- Implementation approaches should be separate files within the problem package
+- Follow naming convention: `[ApproachName]Approach.java`
+- Include strategy interface for multiple implementations
+- Include demo class for running examples
+- Include test class for unit tests
+
+## Code Organization Rules
+1. Strategy Pattern Implementation
+   - Create interface defining problem contract
+   - Each approach implements the strategy interface
+   - Include all approach variations (brute force, optimal, etc.)
+
+2. File Structure for Each Problem
+   ```
+   com.dsa.[category].[problemname]/
+   ├── [ProblemName]Strategy.java       # Interface
+   ├── BruteForceApproach.java         # Basic solution
+   ├── [OptimalApproach]Approach.java  # Best solution
+   ├── [Alternative]Approach.java      # Other approaches
+   ├── [ProblemName]Demo.java          # Demo/Examples
+   └── [ProblemName]Test.java          # Unit tests
+   ```
+
+3. Documentation Requirements
+   - Problem Statement
+   - Constraints
+   - Time/Space Complexity
+   - Approach Description
+   - Edge Cases
+   - Example Usage
+   - Parameter/Return Documentation
+   - Exception Documentation
+
+4. JavaDoc Template for Each Class
+   ```java
+   /**
+    * [Approach name] implementation of [Problem] problem.
+    * 
+    * Approach:
+    * - [Step-by-step algorithm explanation]
+    * 
+    * Time Complexity: O(X) - [explanation]
+    * Space Complexity: O(Y) - [explanation]
+    * 
+    * @see [RelatedClass]
+    */
+   ```
+
+5. Problem Documentation (README.md)
+   - Problem Statement
+   - Constraints
+   - All Approaches with:
+     - Algorithm Description
+     - Time/Space Complexity
+     - Pros/Cons
+     - Use Cases
+   - Edge Cases
+   - Learning Points
+   - Common Mistakes
+   - Interview Tips
+
+6. Test Requirements
+   - Basic Cases
+   - Edge Cases
+   - Error Cases
+   - Performance Tests
+   - All Approaches Tested
+
+7. Demo Class Requirements
+   - Multiple Test Cases
+   - Clear Output Format
+   - Example Usage
+   - Edge Case Demonstrations
+
+8. Code Quality Standards
+   - Follow Java Naming Conventions
+   - Proper Exception Handling
+   - Input Validation
+   - Clear Variable Names
+   - Meaningful Comments
+   - Clean Code Principles
+
+9. Resource Organization
+   ```
+   src/resources/[week]/notes/[problem]/
+   ├── README.md           # Comprehensive documentation
+   ├── APPROACHES.md       # Detailed approach explanations
+   └── LEARNINGS.md        # Key takeaways and insights
+   ```
+
+10. Git Commit Guidelines
+    - Descriptive commit messages
+    - One problem per commit
+    - Include problem number/name
+    - Reference related issues
+
+11. Performance Considerations
+    - Include time/space analysis
+    - Document trade-offs
+    - Optimize for readability first
+    - Include scalability concerns
+
+12. Learning Focus
+    - Document key concepts
+    - Include multiple approaches
+    - Explain trade-offs
+    - Focus on understanding
+    - Include real-world applications
+
+## Maintenance Rules
+1. Keep documentation updated
+2. Review and refactor regularly
+3. Add new approaches as learned
+4. Update test cases as needed
+5. Maintain consistent structure
+
+Fundamentals and Basics
+- Master fundamental mathematical concepts (logarithms, series, probability)
+- Understand memory allocation and computational complexity
+- Learn Big O notation and space-time complexity analysis
+- Practice pseudocode writing before implementation
+- Build strong problem-solving foundations
+- Master basic data types and their operations in Java
+- Understand memory allocation and JVM concepts
+- Learn Big O notation for time and space complexity
+- Practice pseudocode before implementation
+- Build strong mathematical foundations
+- Follow Java naming conventions and best practices
+
+Core Data Structures
+- Implement and understand basic structures (arrays, strings, linked lists)
+- Master advanced structures (trees, graphs, heaps, tries)
+- Learn hash tables and collision resolution strategies
+- Understand when to use each data structure
+- Practice custom data structure implementations
+
+Algorithm Design Patterns
+- Master common patterns (two pointers, sliding window, DFS/BFS)
+- Learn divide and conquer strategies
+- Implement dynamic programming solutions
+- Understand greedy algorithms
+- Practice recursive and iterative approaches
+
+Problem-Solving Framework
+- Follow systematic problem breakdown approach
+- Write clear problem statements
+- Consider edge cases and constraints
+- Analyze multiple solution approaches
+- Optimize initial solutions iteratively
+
+Code Implementation
+- Write clean, readable code
+- Use meaningful variable names (e.g., leftPointer, treeRoot)
+- Implement proper error handling
+- Add comments for complex logic
+- Follow language-specific best practices
+
+Optimization Techniques
+- Learn space-time complexity trade-offs
+- Implement memory optimization techniques
+- Understand algorithmic improvements
+- Practice performance profiling
+- Master in-place modifications
+
+Testing and Debugging
+- Write test cases before implementation
+- Handle edge cases systematically
+- Debug using visualization techniques
+- Implement stress testing
+- Practice problem constraints validation
+
+Advanced Concepts
+- Master advanced graph algorithms
+- Learn string manipulation algorithms
+- Understand bit manipulation
+- Study advanced tree structures
+- Practice parallel algorithms
+
+Real-world Applications
+- Connect DSA to practical scenarios
+- Implement industry-standard solutions
+- Study system design principles
+- Practice scalability concepts
+- Understand trade-offs in real applications
+
+Practice and Learning
+- Solve problems daily
+- Participate in coding competitions
+- Review others' solutions
+- Maintain a problem-solving journal
+- Track progress systematically
+
+Interview Preparation
+- Master common interview patterns
+- Practice time-boxed problem solving
+- Learn to explain solutions clearly
+- Study company-specific patterns
+- Practice whiteboard coding
+
+Code Quality
+- Write maintainable solutions
+- Follow coding standards
+- Implement modular designs
+- Practice code refactoring
+- Review and improve old solutions
+
+Resource Management
+- Understand memory management
+- Learn stack and heap usage
+- Practice efficient resource allocation
+- Implement cleanup strategies
+- Monitor performance metrics
+
+Documentation
+- Document approach and thought process
+- Maintain solution repositories
+- Create algorithm visualization notes
+- Write complexity analysis
+- Document optimization steps
+
+Java-Specific Guidelines
+
+- Use Java built-in libraries effectively
+- Implement proper exception handling
+- Follow Java memory management best practices
+- Use generics appropriately
+- Implement comparable/comparator interfaces
+- Use Java 8+ features effectively
+- Handle null values properly

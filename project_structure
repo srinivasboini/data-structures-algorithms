@@ -1,0 +1,23 @@
+src/
+├── main/
+│   └── java/
+│       └── com/
+│           └── dsa/
+│               ├── arrays/
+│               ├── strings/
+│               ├── twopointers/
+│               ├── slidingwindow/
+│               ├── utils/
+│               └── common/
+├── test/
+│   └── java/
+│       └── com/
+│           └── dsa/
+│               ├── arrays/
+│               ├── strings/
+│               ├── twopointers/
+│               ├── slidingwindow/
+│               └── utils/
+└── resources/
+    └── week1/
+        └── notes/ 
