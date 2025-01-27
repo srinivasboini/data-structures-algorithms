@@ -51,7 +51,10 @@ public class TwoPointerApproach implements TwoSumStrategy {
         while (left < right) {
             int sum = numWithIndex[left][0] + numWithIndex[right][0];
             if (sum == target) {
-                return new int[]{numWithIndex[left][1], numWithIndex[right][1]};
+                int index1 = numWithIndex[left][1];
+                int index2 = numWithIndex[right][1];
+                // Return indices in ascending order
+                return new int[]{Math.min(index1, index2), Math.max(index1, index2)};
             }
             if (sum < target) {
                 left++;
