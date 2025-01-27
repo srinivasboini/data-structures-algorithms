@@ -13,6 +13,10 @@
    - Create interface defining problem contract
    - Each approach implements the strategy interface
    - Include all approach variations (brute force, optimal, etc.)
+   - brute force approach should be the first approach and its mandatory
+   - optimal approach should be the last approach and its mandatory
+   - alternative approach should be the second last approach and its optional
+   - if there are more than 3 approaches, add a new approach file for each new approach
 
 2. File Structure for Each Problem
    ```
