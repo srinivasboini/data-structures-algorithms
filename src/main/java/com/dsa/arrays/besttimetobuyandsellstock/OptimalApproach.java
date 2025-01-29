@@ -1,25 +1,31 @@
 package com.dsa.arrays.besttimetobuyandsellstock;
 
 /**
- * Optimal implementation of Best Time to Buy and Sell Stock problem.
+ * Simplified optimal solution for Best Time to Buy and Sell Stock.
+ * Tracks minimum buy price and maximum profit in a single pass.
  * 
- * Approach:
- * - Track the minimum price encountered so far.
- * - Calculate the profit for each day and update the maximum profit.
- * 
- * Time Complexity: O(n) - Single pass through the array.
- * Space Complexity: O(1) - No additional space used.
+ * Time Complexity: O(n) - One iteration through prices
+ * Space Complexity: O(1) - Uses only two variables
  */
 public class OptimalApproach implements BestTimeToBuyAndSellStockStrategy {
     @Override
     public int maxProfit(int[] prices) {
-        int minPrice = Integer.MAX_VALUE;
+        if (prices.length == 0) return 0;
+        
+        int minBuyPrice = prices[0];
         int maxProfit = 0;
-        for (int price : prices) {
-            if (price < minPrice) {
-                minPrice = price;
-            } else if (price - minPrice > maxProfit) {
-                maxProfit = price - minPrice;
+        
+        for (int i = 1; i < prices.length; i++) {
+            // Update minimum price seen so far
+            if (prices[i] < minBuyPrice) {
+                minBuyPrice = prices[i];
+            } 
+            // Update maximum profit if current profit is higher
+            else {
+                int currentProfit = prices[i] - minBuyPrice;
+                if (currentProfit > maxProfit) {
+                    maxProfit = currentProfit;
+                }
             }
         }
         return maxProfit;

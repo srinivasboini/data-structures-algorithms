@@ -20,4 +20,11 @@ public class BestTimeToBuyAndSellStockTest {
         assertEquals(5, strategy.maxProfit(new int[]{7, 1, 5, 3, 6, 4}));
         assertEquals(0, strategy.maxProfit(new int[]{7, 6, 4, 3, 1}));
     }
+
+    @Test
+    public void testTwoPointersApproach() {
+        BestTimeToBuyAndSellStockStrategy strategy = new TwoPointersApproach();
+        assertEquals(5, strategy.maxProfit(new int[]{7, 1, 5, 3, 6, 4}));
+        assertEquals(0, strategy.maxProfit(new int[]{7, 6, 4, 3, 1}));
+    }
 } 

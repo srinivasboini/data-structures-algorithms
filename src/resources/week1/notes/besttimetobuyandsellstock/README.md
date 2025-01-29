@@ -23,6 +23,15 @@ Given an array `prices` where `prices[i]` is the price of a given stock on the `
 - **Pros**: Efficient and easy to understand.
 - **Cons**: None significant.
 
+### Two Pointers Approach
+- **Algorithm**: Use two pointers to track potential buy/sell days
+- **Time Complexity**: O(n)
+- **Space Complexity**: O(1)
+- **Pros**:
+  - Clear pointer-based logic
+  - Easy to visualize
+- **Cons**: Slightly more variables than minimal optimal solution
+
 ## Edge Cases
 - Prices are in descending order, resulting in zero profit.
 - Prices are constant, resulting in zero profit.
