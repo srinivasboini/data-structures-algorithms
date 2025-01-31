@@ -2,11 +2,11 @@ package com.dsa.slidingwindow.maximumsubarray;
 
 public class MaximumSubarrayDemo {
     public static void main(String[] args) {
-        MaximumSubarrayStrategy strategy = new KadaneApproach();
+        MaximumSubarrayStrategy strategy = new SlidingWindowApproach();
         
         // Test Case 1
-        int[] nums1 = {-2,1,-3,4,-1,2,1,-5,4};
-        printResult(nums1, strategy);
+        int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+        printResultWithWindow(nums, strategy);
         
         // Test Case 2
         int[] nums2 = {-3,-2,-1,-4};
@@ -15,6 +15,14 @@ public class MaximumSubarrayDemo {
         // Test Case 3
         int[] nums3 = {5};
         printResult(nums3, strategy);
+    }
+
+    private static void printResultWithWindow(int[] nums, MaximumSubarrayStrategy strategy) {
+        System.out.println("Input array: " + arrayToString(nums));
+        System.out.println("Processing steps:");
+        
+        int result = strategy.maxSubArray(nums);
+        System.out.println("Final result: " + result);
     }
 
     private static void printResult(int[] nums, MaximumSubarrayStrategy strategy) {
@@ -32,4 +40,6 @@ public class MaximumSubarrayDemo {
         sb.append("]");
         return sb.toString();
     }
+
+   
 } 
