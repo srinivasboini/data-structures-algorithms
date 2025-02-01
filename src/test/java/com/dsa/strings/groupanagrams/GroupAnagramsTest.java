@@ -9,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GroupAnagramsTest {
     private final GroupAnagramsStrategy[] strategies = {
+        new BruteForceApproach(),
         new SortedKeyApproach(),
         new CharacterCountApproach()
     };
